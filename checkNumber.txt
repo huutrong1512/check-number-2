@@ -1,0 +1,25 @@
+//noprotect
+
+var randomNumber = Math.floor(Math.random() * 10);
+console.log(randomNumber + " is the random number");
+var pastGuesses = [];
+for(let gameCount=0; gameCount<9; gameCount++){
+var Guess = prompt("Insert your guess number");
+var x = parseInt(Guess);
+
+console.log(pastGuesses.push(x)); 
+console.log(x + " is the guess number");
+var y=9-gameCount;
+  if (randomNumber == x) {
+    alert("Congrats! Your past guesses are "+pastGuesses+" & you have "+y+" guesses left.");
+    break;
+  }
+  else if (randomNumber < x) {
+    alert("Too high! Your past guesses are "+pastGuesses+" & you have "+y+" guesses left.")
+  } 
+  else {
+    alert("Too low! Your past guesses are "+pastGuesses+" & you have "+y+" guesses left.")
+  }
+  console.log(pastGuesses);
+  
+}
